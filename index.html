@@ -4,42 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aashi Mishra's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #2c3e50;
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
         }
         section {
-            margin: 40px 20px;
+            margin: 50px auto;
+            padding: 0 20px;
+            max-width: 1200px;
         }
         h2 {
             color: #2c3e50;
-        }
-        .projects, .classes, .interests {
-            margin-bottom: 40px;
-        }
-        .project-card, .class-card, .interest-card {
-            background-color: white;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #2c3e50;
-            color: white;
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
         a {
             color: #3498db;
@@ -48,57 +75,84 @@
         a:hover {
             text-decoration: underline;
         }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 10px 0;
+        }
+        footer a {
+            color: #f39c12;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Aashi Mishra's Portfolio</h1>
-        <p>Software Engineering | Research | Design</p>
+        <p>Computer Science | Research | Design</p>
     </header>
 
     <section class="projects">
         <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Weather Detection Device</h3>
-            <p>A low-cost device using Arduino to detect weather conditions in remote areas.</p>
-            <a href="https://github.com/yourusername/weather-device" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project-card">
-            <h3>Maze Navigation</h3>
-            <p>3D Maze solver using BFS and DFS algorithms to navigate a space station.</p>
-            <a href="https://github.com/yourusername/maze-navigation" target="_blank">View on GitHub</a>
+        <div class="cards">
+            <div class="card project-card">
+                <h3>Weather Detection Device</h3>
+                <p>A low-cost device using Arduino to detect weather conditions in remote areas.</p>
+                <a href="https://github.com/yourusername/weather-device" target="_blank">View on GitHub</a>
+            </div>
+            <div class="card project-card">
+                <h3>Maze Navigation</h3>
+                <p>3D Maze solver using BFS and DFS algorithms to navigate a space station.</p>
+                <a href="https://github.com/yourusername/maze-navigation" target="_blank">View on GitHub</a>
+            </div>
         </div>
     </section>
 
     <section class="classes">
         <h2>Classes</h2>
-        <div class="class-card">
-            <h3>EECS 281: Data Structures and Algorithms</h3>
-            <p>Focused on algorithm design, efficiency analysis, and advanced data structures.</p>
-        </div>
-        <div class="class-card">
-            <h3>ENGR 100: Introduction to Engineering</h3>
-            <p>An introductory course in engineering principles, focusing on teamwork and design.</p>
+        <div class="cards">
+            <div class="card class-card">
+                <h3>EECS 281: Data Structures and Algorithms</h3>
+                <p>Focused on algorithm design, efficiency analysis, and advanced data structures.</p>
+            </div>
+            <div class="card class-card">
+                <h3>ENGR 100: Introduction to Engineering</h3>
+                <p>An introductory course in engineering principles, focusing on teamwork and design.</p>
+            </div>
         </div>
     </section>
 
     <section class="interests">
         <h2>Interests</h2>
-        <div class="interest-card">
-            <h3>Machine Learning and NLP</h3>
-            <p>Working on AI-driven projects, including a mental health chatbot using Natural Language Processing.</p>
-        </div>
-        <div class="interest-card">
-            <h3>Space Engineering</h3>
-            <p>Collaborating with NASA on particle instrument design for space missions.</p>
+        <div class="cards">
+            <div class="card interest-card">
+                <h3>Machine Learning and NLP</h3>
+                <p>Working on AI-driven projects, including a mental health chatbot using Natural Language Processing.</p>
+            </div>
+            <div class="card interest-card">
+                <h3>Space Engineering</h3>
+                <p>Collaborating with NASA on particle instrument design for space missions.</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/aashi-mishra" target="_blank">LinkedIn</a></p>
+        <p>&copy; 2024 Aashi Mishra | Connect on <a href="https://www.linkedin.com/in/aashi-mishra" target="_blank">LinkedIn</a> | <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
     </footer>
 
 </body>
 </html>
+
 
