@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aashi Mishra's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -32,6 +34,24 @@
             font-size: 1.2rem;
             margin: 10px 0 0;
         }
+
+        /* Add styles for the links bar */
+        .contact-bar {
+            margin-top: 15px;
+        }
+        .contact-bar a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .contact-bar a:hover {
+            color: #f39c12;
+        }
+        .contact-bar i {
+            margin-right: 5px;
+        }
+
         section {
             margin: 50px auto;
             padding: 0 20px;
@@ -100,8 +120,21 @@
 <body>
 
     <header>
-        <h1>Aashi Mishra's Portfolio</h1>
+        <h1>Aashi Mishra</h1>
         <p>Computer Science | Research | Design</p>
+
+        <!-- Add this section for links with icons -->
+        <div class="contact-bar">
+            <a href="mailto:your.email@example.com">
+                <i class="fas fa-envelope"></i>Email
+            </a>
+            <a href="https://www.linkedin.com/in/aashi-mishra/" target="_blank">
+                <i class="fab fa-linkedin"></i>LinkedIn
+            </a>
+            <a href="https://github.com/am3005" target="_blank">
+                <i class="fab fa-github"></i>GitHub
+            </a>
+        </div>
     </header>
 
     <section class="projects">
@@ -149,10 +182,11 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Aashi Mishra | Connect on <a href="https://www.linkedin.com/in/aashi-mishra" target="_blank">LinkedIn</a> | <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+        <p>&copy; 2024 Aashi Mishra | Connect on <a href="https://www.linkedin.com/in/aashi-mishra/" target="_blank">LinkedIn</a> | <a href="https://github.com/am3005" target="_blank">GitHub</a></p>
     </footer>
 
 </body>
 </html>
+
 
 
