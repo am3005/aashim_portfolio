@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashi Mishra's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header - Home Section */
+        header {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+        }
+
+        header .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /* About Section */
+        section#about {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section#about h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#about p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Projects Section */
+        section#projects {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        section#projects h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-card h3 {
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        /* Contact Section */
+        section#contact {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        section#contact h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#contact p {
+            font-size: 1.2rem;
+        }
+
+        .contact-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Section -->
+    <header>
+        <h1>Aashi Mishra</h1>
+        <p>Computer Science | Research | Design</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/aashi-mishra/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/am3005" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:aashi@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm Aashi Mishra, a Computer Science student at the University of Michigan. I specialize in software development, AI, and research design.
+            I'm passionate about machine learning, NLP, and space engineering. I'm currently involved in space missions with NASA and building innovative projects in AI and software engineering.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>Weather Detection Device</h3>
+                <p>A low-cost device using Arduino to detect weather conditions in remote areas.</p>
+                <a href="https://github.com/yourusername/weather-device" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Maze Navigation</h3>
+                <p>3D Maze solver using BFS and DFS algorithms to navigate a space station.</p>
+                <a href="https://github.com/yourusername/maze-navigation" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via email or connect with me on LinkedIn or GitHub!</p>
+        <div class="contact-icons">
+            <a href="mailto:aashi@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/aashi-mishra/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/am3005" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Aashi Mishra | All Rights Reserved</p>
+    </footer>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
