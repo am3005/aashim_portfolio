@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aashi Mishra's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         /* Header - Home Section */
@@ -23,6 +50,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 0 20px;
         }
 
         header h1 {
@@ -42,35 +70,32 @@
             font-size: 1.5rem;
         }
 
-        /* About Section */
-        section#about {
+        /* Sections */
+        section {
             padding: 80px 20px;
             text-align: center;
         }
 
-        section#about h2 {
+        section h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
-        section#about p {
+        section p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Projects Section */
-        section#projects {
-            padding: 80px 20px;
-            background-color: #f8f9fa;
+        /* About Section */
+        #about {
+            background-color: #fff;
         }
 
-        section#projects h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
+        /* Projects Section */
+        #projects {
+            background-color: #f8f9fa;
         }
 
         .project-cards {
@@ -104,22 +129,28 @@
             color: #3498db;
         }
 
-        /* Contact Section */
-        section#contact {
-            padding: 80px 20px;
+        /* Classes Section */
+        #classes {
+            background-color: #fff;
+        }
+
+        .class-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+        }
+
+        .class-card h3 {
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        /* Contact Section */
+        #contact {
             background-color: #2c3e50;
             color: white;
-        }
-
-        section#contact h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        section#contact p {
-            font-size: 1.2rem;
         }
 
         .contact-icons a {
@@ -139,12 +170,37 @@
         footer p {
             margin: 0;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#classes">Classes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <!-- Home Section -->
-    <header>
+    <header id="home">
         <h1>Aashi Mishra</h1>
         <p>Computer Science | Research | Design</p>
         <div class="social-icons">
@@ -180,10 +236,25 @@
         </div>
     </section>
 
+    <!-- Classes Section -->
+    <section id="classes">
+        <h2>Classes</h2>
+        <div class="project-cards">
+            <div class="class-card">
+                <h3>EECS 281: Data Structures and Algorithms</h3>
+                <p>Focused on algorithm design, efficiency analysis, and advanced data structures.</p>
+            </div>
+            <div class="class-card">
+                <h3>ENGR 100: Introduction to Engineering</h3>
+                <p>An introductory course in engineering principles, focusing on teamwork and design.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Feel free to reach out via email or connect with me on LinkedIn or GitHub!</p>
+        <p>Feel free to reach out to me through email or connect with me on LinkedIn and GitHub!</p>
         <div class="contact-icons">
             <a href="mailto:aashi@example.com"><i class="fas fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/aashi-mishra/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -197,7 +268,7 @@
     </footer>
 
     <!-- FontAwesome Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
