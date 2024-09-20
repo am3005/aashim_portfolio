@@ -127,6 +127,22 @@
             background-color: #f8f9fa;
         }
 
+        /* Language Tag Styling */
+        .language-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #3498db; 
+            color: white;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+        }
+
         .project-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,6 +152,7 @@
         }
 
         .project-card {
+            position: relative;
             background-color: white;
             border-radius: 8px;
             padding: 20px;
@@ -267,33 +284,40 @@
         <div class="project-cards">
             <div class="project-card">
                 <h3>Heliophysics</h3>
+                <span class="language-tag">Python</span> <!-- Language Tag -->
                 <p>Python based software pipeline to predict solar flare events from collected radio data.</p>
                 <a href="https://github.com/Kasper-Heliophysics-MDP/Data-Pipeline" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
                 <h3>MBASED</h3>
+                <span class="language-tag">Python</span> <!-- Language Tag -->
                 <p>Python based mixed boolean arithmetic deobfuscation plugin.</p>
                 <a href="https://github.com/bliutech/mbased" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
                 <h3>EECS 280 P2: Computer Vision</h3>
+                <span class="language-tag">C/C++</span> <!-- Language Tag -->
                 <p>Developed image resizing and reformatting algorithm using pointers.</p>
             </div>
             <div class="project-card">
                 <h3>EECS 280 P3: Euchre Card Game</h3>
+                <span class="language-tag">C/C++</span> <!-- Language Tag -->
                 <p>Implemented a fully functional card game with options for multiplayer and 
                     computer opponents using classes and dynamic programming.</p>
             </div>
             <div class="project-card">
                 <h3>EECS 280 P4: Text Editor</h3>
+                <span class="language-tag">C/C++</span> <!-- Language Tag -->
                 <p>Created a simple text editor with essential features and functionality using linked lists.</p>
             </div>
             <div class="project-card">
                 <h3>EECS 280 P5: Machine Learning</h3>
+                <span class="language-tag">C/C++</span> <!-- Language Tag -->
                 <p>Developed machine learning model to predict topic of class Piazza posts using maps and BST.</p>
             </div>
             <div class="project-card">
                 <h3>EECS 281 P1: Pathfinding</h3>
+                <span class="language-tag">C/C++</span> <!-- Language Tag -->
                 <p>Stacks, Queues, and Deques to create a pathfinding algorithm.</p>
             </div>
         </div>
